@@ -1,1 +1,31 @@
-# python3-object-oriented-programming
+So, an object is a collection of data with  associated behaviors. How do we differentiate between types of objects?  Apples and oranges are both objects, but it is a common adage that they  cannot be compared. Apples and oranges aren't modeled very often in  computer programming, but let's pretend we're doing an inventory  application for a fruit farm. To facilitate the example, we can assume  that apples go in barrels and oranges go in baskets.
+
+Now, we have four kinds of objects: apples, oranges, baskets, and barrels. In object-oriented modeling, the term used for a **kind of object** is **class**. So, in technical terms, we now have four classes of objects.
+
+It's  important to understand the difference between an object and a class.  Classes describe objects. They are like blueprints for creating an  object. You might have three oranges sitting on the table in front of  you. Each orange is a distinct object, but all three have the attributes  and behaviors associated with one class: the general class of oranges.
+
+The relationship between the four classes of objects in our inventory system can be described using a **Unified Modeling Language** (invariably referred to as **UML**, because three-letter acronyms never go out of style) class diagram. Here is our first class diagram:
+
+![img](https://static.packt-cdn.com/products/9781789615852/graphics/52d2341c-c0b6-4a9d-89ef-0d3e8bfee450.png)
+
+This diagram shows that an **Orange** is somehow associated with a **Basket** and that an **Apple** is also somehow associated with a **Barrel**. *Association* is the most basic way for two classes to be related.
+
+UML is very popular among managers, and occasionally  disparaged by programmers. The syntax of a UML diagram is generally  pretty obvious; you don't have to read a tutorial to (mostly) understand  what is going on when you see one. UML is also fairly easy to draw, and  quite intuitive. After all, many people, when describing classes and  their relationships, will naturally draw boxes with lines between them.  Having a standard based on these intuitive diagrams makes it easy for  programmers to communicate with designers, managers, and each other.
+
+However,  some programmers think UML is a waste of time. Citing iterative  development, they will argue that formal specifications done up in fancy  UML diagrams are going to be redundant before they're implemented, and  that maintaining these formal diagrams will only waste time and not  benefit anyone.
+
+Depending on the corporate structure involved,  this may or may not be true. However, every programming team consisting  of more than one person will occasionally have to sit down and hash out  the details of the subsystem it is currently working on. UML is  extremely useful in these brainstorming sessions for quick and easy  communication. Even those organizations that scoff at formal class  diagrams tend to use some informal version of UML in their design  meetings or team discussions.
+
+Furthermore, the most important  person you will ever have to communicate with is yourself. We all think  we can remember the design decisions we've made, but there will always  be the *Why did I do that?* moments  hiding in our future. If we keep the scraps of papers we did our  initial diagramming on when we started a design, we'll eventually find  them a useful reference.
+
+This chapter, however, is not meant to be  a tutorial on UML. There are many of those available on the internet,  as well as numerous books on the topic. UML covers far more than class  and object diagrams; it also has a syntax for use cases, deployment,  state changes, and activities. We'll be dealing with some common class  diagram syntax in this discussion of object-oriented design. You can  pick up the structure by example, and you'll subconsciously choose the  UML-inspired syntax in your own team or personal design sessions.
+
+Our initial diagram, while correct, does not remind  us that apples go in barrels or how many barrels a single apple can go  in. It only tells us that apples are somehow associated with barrels.  The association between classes is often obvious and needs no further  explanation, but we have the option to add further clarification as  needed.
+
+The beauty of UML is that most things are optional. We  only need to specify as much information in a diagram as makes sense for  the current situation. In a quick whiteboard session, we might just  quickly draw lines between boxes. In a formal document, we might go into  more detail. In the case of apples and barrels, we can be fairly  confident that the association is **many apples go in one barrel**, but just to make sure nobody confuses it with **one apple spoils one barrel**, we can enhance the diagram as shown:
+
+![img](https://static.packt-cdn.com/products/9781789615852/graphics/d7785588-4292-4ea8-a3f4-eb67be27a2dc.png)
+
+This diagram tells us that oranges **go in**  baskets, with a little arrow showing what goes in what. It also tells  us the number of that object that can be used in the association on both  sides of the relationship. One **Basket** can hold many (represented by a *****) **Orange** objects. Any one **Orange** can go in exactly one **Basket**. This number is referred to as the **multiplicity** of the object. You may also hear it described as the **cardinality**.  These are actually slightly distinct terms. Cardinality refers to the  actual number of items in the set, whereas multiplicity specifies how  small or how large the set could be.
+
+I  sometimes forget which end of the relationship line is supposed to have  which multiplicity number. The multiplicity nearest to a class is the  number of objects of that class that can be associated with any one  object at the other end of the association. For the apple goes in barrel  association, reading from left to right, many instances of the **Apple** class (that is many **Apple** objects) can go in any one **Barrel**. Reading from right to left, exactly one **Barrel** can be associated with any one **Apple**.

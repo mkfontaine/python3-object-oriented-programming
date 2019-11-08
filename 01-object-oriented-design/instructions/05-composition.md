@@ -1,1 +1,37 @@
-# python3-object-oriented-programming
+So far, we have learned  to design systems as a group of interacting objects, where each  interaction involves viewing objects at an appropriate level of  abstraction. But we don't know yet how to create these levels of  abstraction. There are a variety of ways to do this; we'll discuss some  advanced design patterns in **Strings and Serialization**, and **The Iterator Pattern**. But even most design patterns rely on two basic object-oriented principles known as **composition** and **inheritance**. Composition is simpler, so let's start with it.
+
+Composition  is the act of collecting several objects together to create a new one.  Composition is usually a good choice when one object is part of another  object. We've already seen a first hint of composition in the mechanic  example. A fossil-fueled car is composed of an engine, transmission,  starter, headlights, and windshield, among numerous other parts. The  engine, in turn, is composed of pistons, a crank shaft, and valves. In  this example, composition is a good way to provide levels of  abstraction. The **Car** object  can provide the interface required by a driver, while also giving  access to its component parts, which offers the deeper level of  abstraction suitable for a mechanic. Those component parts can, of  course, be further broken down if the mechanic needs more information to  diagnose a problem or tune the engine.
+
+A car is a common  introductory example of composition, but it's not overly useful when it  comes to designing computer systems. Physical objects are easy to break  into component objects. People have been doing this at least since the  ancient Greeks originally postulated that atoms were the smallest units  of matter (they, of course, didn't have access to particle  accelerators). Computer systems are generally less complicated than  physical objects, yet identifying the component objects in such systems  does not happen as naturally.
+
+The objects in an object-oriented  system occasionally represent physical objects such as people, books, or  telephones. More often, however, they represent abstract ideas. People  have names, books have titles, and telephones are used to make calls.  Calls, titles, accounts, names, appointments, and payments are not  usually considered objects in the physical world, but they are all frequently-modeled components in computer systems.
+
+Let's  try modeling a more computer-oriented example to see composition in  action. We'll be looking at the design of a computerized chess game.  This was a very popular pastime among academics in the 80s and 90s.  People were predicting that computers would one day be able to defeat a  human chess master. When this happened in 1997 (IBM's Deep Blue defeated  world chess champion, Gary Kasparov), interest in the problem waned.  Nowadays, the computer always wins.
+
+As a basic, high-level analysis, a **game** of chess is **played** between two **players**, using a chess set featuring a **board** containing sixty-four **positions** in an 8x8 grid. The board can have two sets of sixteen **pieces** that can be **moved**, in alternating **turns** by the two players in different ways. Each piece can **take** other pieces. The board will be required to **draw** itself on the computer **screen** after each turn.
+
+I've identified some of the possible objects in the description using **italics**, and a few key methods using **bold**.  This is a common first step in turning an object-oriented analysis into  a design. At this point, to emphasize composition, we'll focus on the  board, without worrying too much about the players or the different  types of pieces.
+
+Let's start at the highest level of abstraction possible. We have two players interacting with a **Chess Set** by taking turns making moves:
+
+![img](https://static.packt-cdn.com/products/9781789615852/graphics/c88896c8-925d-4bb6-9571-048bcad9f271.png)
+
+This doesn't quite look like our earlier class diagrams, which is a good thing since it isn't one! This is an **object diagram**, also called an **instance diagram**. It describes the system at a specific state in time, and is describing specific instances of objects, not the interaction between classes. Remember, both players are members of the same class, so the class diagram looks a little different:
+
+![img](https://static.packt-cdn.com/products/9781789615852/graphics/623e8615-5265-48d8-9440-efc9baeb9fa5.png)
+
+The diagram shows that exactly two players can interact with one  chess set. This also indicates that any one player can be playing with  only one **Chess Set** at a time.
+
+However, we're discussing composition, not UML, so let's think about what the **Chess Set**  is composed of. We don't care what the player is composed of at this  time. We can assume that the player has a heart and brain, among other  organs, but these are irrelevant to our model. Indeed, there is nothing  stopping said player from being Deep Blue itself, which has neither a  heart nor a brain.
+
+The chess set, then, is composed of a board and  32 pieces. The board further comprises 64 positions. You could argue  that pieces are not part of the chess set because you could replace the  pieces in a chess set with a different set of pieces. While this is unlikely or impossible in a computerized version of chess, it introduces us to **aggregation**.
+
+Aggregation is almost  exactly like composition. The difference is that aggregate objects can  exist independently. It would be impossible for a position to be  associated with a different chess board, so we say the board is composed  of positions. But the pieces, which might exist independently of the  chess set, are said to be in an aggregate relationship with that set.
+
+Another  way to differentiate between aggregation and composition is to think  about the lifespan of the object. If the composite (outside) object  controls when the related (inside) objects are created and destroyed,  composition is most suitable. If the related object is created  independently of the composite object, or can outlast that object, an  aggregate relationship makes more sense. Also, keep in mind that  composition is aggregation; aggregation is simply a more general form of  composition. Any composite relationship is also an aggregate  relationship, but not vice versa.
+
+Let's describe our current **Chess Set** composition and add some attributes to the objects to hold the composite relationships:
+
+![img](https://static.packt-cdn.com/products/9781789615852/graphics/60c6f63b-ae82-4e96-a01f-2f74e2abcf92.png)
+
+The composition relationship is represented in UML as a solid diamond. The hollow diamond represents the aggregate relationship. You'll notice that the board and pieces are stored as part of the **Chess Set** in exactly the same way a reference to them is stored as an attribute on the chess set. This shows that, once again, in practice, the distinction between aggregation and composition is often irrelevant once you get past the design stage. When implemented, they behave in much the same way. However, it can help to differentiate between the two when your team is discussing how the different objects interact. Often, you can treat them as the same thing, but when you need to distinguish between them (usually when talking about how long related objects exist), it's great to know the difference.

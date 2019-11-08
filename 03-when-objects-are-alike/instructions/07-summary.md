@@ -1,1 +1,3 @@
-# python3-object-oriented-programming
+We've gone from simple inheritance, one of the most useful tools in  the object-oriented programmer's toolbox, all the way through to  multiple inheritance—One of the most complicated. Inheritance can be  used to add functionality to existing classes and built-ins using  inheritance. Abstracting similar code into a parent class can help  increase maintainability. Methods on parent classes can be called using `super`  and argument lists must be formatted safely for these calls to work  when using multiple inheritance. Abstract base classes allow you to  document what methods and properties a class must have to fulfill a  particular interface, and even allow you to change the very definition  of **subclass**.
+
+In the next lesson, we'll cover the subtle art of handling exceptional circumstances.

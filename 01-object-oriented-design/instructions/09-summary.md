@@ -1,1 +1,3 @@
-# python3-object-oriented-programming
+In this lesson, we took a whirlwind tour through the terminology of  the object-oriented paradigm, focusing on object-oriented design. We can  separate different objects into a taxonomy of different classes and  describe the attributes and behaviors of those objects via the class  interface. Abstraction, encapsulation, and information hiding are highly-related concepts.  There are many different kinds of relationships between objects,  including association, composition, and inheritance. UML syntax can be  useful for fun and communication.
+
+In the next lesson, we'll explore how to implement classes and methods in Python.
