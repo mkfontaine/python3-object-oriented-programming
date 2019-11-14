@@ -1,1 +1,3 @@
-# python3-object-oriented-programming
+This lesson discussed several common design patterns in detail, with  examples, UML diagrams, and a discussion of the differences between  Python and statically typed object-oriented languages. The decorator  pattern is often implemented using Python's more generic decorator  syntax. The observer pattern is a useful way to decouple events from  actions taken on those events. The strategy pattern allows different  algorithms to be chosen to accomplish the same task. The state pattern  looks similar, but is used instead to represent systems can move between  different states using well-defined actions. The singleton pattern,  popular in some statically typed languages, is almost always an  anti-pattern in Python.
+
+In the next lesson, we'll wrap up our discussion of design patterns.

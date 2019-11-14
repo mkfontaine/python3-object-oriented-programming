@@ -1,1 +1,3 @@
-# python3-object-oriented-programming
+In this lesson, we went into the gritty details of raising,  handling, defining, and manipulating exceptions. Exceptions are a  powerful way to communicate unusual circumstances or error conditions  without requiring a calling function to explicitly check return values.  There are many built-in exceptions and raising them is trivially easy.  There are several different syntaxes for handling different exception  events.
+
+In the next lesson, everything we've studied so far will  come together as we discuss how object-oriented programming principles  and structures should best be applied in Python applications.

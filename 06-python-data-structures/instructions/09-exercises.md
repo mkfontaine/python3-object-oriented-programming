@@ -1,1 +1,11 @@
-# python3-object-oriented-programming
+The best way to learn how to choose the correct data structure is to  do it wrong a few times (intentionally or accidentally!). Take some code  you've recently written, or write some new code that uses a list. Try  rewriting it using some different data structures. Which ones make more  sense? Which ones don't? Which have the most elegant code?
+
+Try  this with a few different pairs of data structures. You can look at  examples you've done for previous chapter exercises. Are there objects  with methods where you could have used dataclasses, `namedtuple`, or `dict`  instead? Attempt both and see. Are there dictionaries that could have  been sets because you don't really access the values? Do you have lists  that check for duplicates? Would a set suffice? Or maybe several sets?  Would one of the queue implementations be more efficient? Is it useful  to restrict the API to the top of a stack rather than allowing random  access to the list?
+
+If you want some specific examples to work  with, try adapting the link collector to also save the title used for  each link. Perhaps you can generate a site map in HTML that lists all  the pages on the site, and that contains a list of links to other pages,  named with the same link titles.
+
+Have you written any container objects recently that you could improve by inheriting a built-in and overriding some of the *special* double-underscore methods? You may have to do some research (using `dir` and `help`,  or the Python library reference) to find out which methods need  overriding. Are you sure inheritance is the correct tool to apply; could  a composition-based solution be more effective? Try both (if it's  possible) before you decide. Try to find different situations where each  method is better than the other.
+
+If you were familiar with the  various Python data structures and their uses before you started this  chapter, you may have been bored. But if that is the case, there's a  good chance you use data structures too much! Look at some of your old  code and rewrite it to use more self-made classes. Carefully consider  the alternatives and try them all out; which one makes for the most  readable and maintainable system?
+
+Always critically evaluate your  code and design decisions. Make a habit of reviewing old code and take  note if your understanding of **good design** has  changed since you've written it. Software design has a large aesthetic  component, and like artists with oil on canvas, we all have to find the  style that suits us best.

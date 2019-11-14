@@ -1,1 +1,3 @@
-# python3-object-oriented-programming
+In this lesson, we focused on identifying objects, especially objects that are not immediately apparent; objects that manage and control.  Objects should have both data and behaviors, but properties can be used  to blur the distinction between the two. The DRY principle is an  important indicator of code quality, and inheritance and composition can  be applied to reduce code duplication.
+
+In the next lesson, we'll  cover several of the built-in Python data structures and objects,  focusing on their object-oriented properties and how they can be  extended or adapted.

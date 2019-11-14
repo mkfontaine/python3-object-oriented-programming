@@ -1,1 +1,3 @@
-# python3-object-oriented-programming
+We've covered several built-in data structures and attempted to  understand how to choose one for specific applications. Sometimes, the  best thing we can do is create a new class of objects, but often, one of  the built-ins provides exactly what we need. When it doesn't, we can  always use inheritance or composition to adapt them to our use cases. We  can even override special methods to completely change the behavior of  built-in syntaxes.
+
+In the next lesson, we'll discuss how to  integrate the object-oriented and not-so-object-oriented aspects of  Python. Along the way, we'll discover that it's more object-oriented  than it looks at first sight!

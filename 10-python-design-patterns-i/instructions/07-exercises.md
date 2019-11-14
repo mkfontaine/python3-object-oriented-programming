@@ -1,1 +1,9 @@
-# python3-object-oriented-programming
+While writing the examples for this lesson, I discovered that it can  be very difficult, and extremely educational, to come up with good  examples where specific design patterns should be used. Instead of going  over current or old projects to see where you can apply these patterns,  as I've suggested in previous chapters, think about the patterns and  different situations where they might come up. Try to think outside your  own experiences. If your current projects are in the banking business,  consider how you'd apply these design patterns in a retail or  point-of-sale application. If you normally write web applications, think  about using design patterns while writing a compiler.
+
+Look at the  decorator pattern and come up with some good examples of when to apply  it. Focus on the pattern itself, not the Python syntax we discussed.  It's a bit more general than the actual pattern. The special syntax for  decorators is, however, something you may want to look for places to  apply in existing projects too.
+
+What are some good areas to use  the observer pattern? Why? Think about not only how you'd apply the  pattern, but how you would implement the same task without using  observer? What do you gain, or lose, by choosing to use it?
+
+Consider  the difference between the strategy and state patterns.  Implementation-wise, they look very similar, yet they have different  purposes. Can you think of cases where the patterns could be  interchanged? Would it be reasonable to redesign a state-based system to  use strategy instead, or vice versa? How different would the design  actually be?
+
+The template pattern is such an obvious application  of inheritance to reduce duplicate code that you may have used it  before, without knowing its name. Try to think of at least half a dozen  different scenarios where it would be useful. If you can do this, you'll  be finding places for it in your daily coding all the time.
